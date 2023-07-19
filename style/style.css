@@ -147,7 +147,8 @@
     margin-bottom: 16px;
 }
 
-.online-video-content h2 span {
+.online-video-content h2 span,
+.online-game-content span {
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -170,25 +171,25 @@
     opacity: 0;
     height: 100%;
     width: 100%;
-    border-radius:16px;
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+    border-radius: 16px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
 }
 
 .card-overlay h4 {
     position: absolute;
-    top:60%;
-    left:50%;
+    top: 60%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: #F948B2;
     text-align: center;
-    
+
 }
 
-.card-overlay img{
+.card-overlay img {
     width: 45px;
     position: absolute;
-    top:40%;
-    left:40%;
+    top: 40%;
+    left: 40%;
 }
 
 .video-card-item-effect:hover {
@@ -201,6 +202,106 @@
 .video-card-item-effect:hover .card-overlay {
     opacity: 1;
 }
+
+/* online game section  */
+.online-game {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8%;
+    align-items: center;
+    gap: 100px;
+}
+
+.online-game-item {
+    position: relative;
+}
+
+.online-game-item img {
+    width: 100%;
+}
+
+.game-samll-picture {
+    position: absolute;
+    top: 60%;
+    right: -60%;
+}
+
+.game-samll-picture img {
+    width: 50%;
+}
+
+.online-game-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* game btn sectin style  */
+
+.game-button-name {
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    padding: 50px 12%;
+    margin: 120px 0;
+}
+
+.game-btn img {
+    width: 40px;
+    height: 40px;
+
+}
+
+.game-btn {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 5px;
+}
+
+.game-btn p {
+    font-size: 12px;
+}
+
+.game-btn:hover {
+    border-radius: 50px;
+    background-color: white;
+    border: 2px solid #FF42A5;
+    color: #FF42A5;
+}
+
+/* footer section  */
+.footer {
+    background-color: #0B0223;
+    background-size: cover;
+    color: white;
+    padding: 120px 10%;
+    text-align: center;
+    width: auto;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+
+}
+
+#footer-logo {
+    margin: 40px;
+}
+
+.foter-list ul {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-list ul,
+li {
+    padding: 10px;
+    cursor: pointer;
+}
+
 
 
 
@@ -225,11 +326,28 @@
         margin: 0 10%;
         padding: 5%;
     }
-    .online-video-card{
+
+    .online-video-card {
         grid-template-columns: repeat(1, 1fr);
     }
-    .card-overlay img{
-        left:43%;
+
+    .card-overlay img {
+        left: 43%;
+    }
+
+    .online-game {
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    .game-samll-picture {
+        position: absolute;
+        top: 50%;
+        right: -25%;
+    }
+
+    .game-button-name {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -255,10 +373,27 @@
         margin: 0 10%;
         padding: 7%;
     }
-    .online-video-card{
+
+    .online-video-card {
         grid-template-columns: repeat(2, 1fr);
     }
-    .card-overlay img{
-        left:42%;
+
+    .card-overlay img {
+        left: 42%;
+    }
+
+    .online-game {
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    .game-samll-picture {
+        position: absolute;
+        top: 70%;
+        right: -15%;
+    }
+
+    .game-button-name {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
