@@ -35,7 +35,7 @@
 }
 
 .follow-btn {
-    padding: 17px 24px;
+    padding: 17px 17px;
     border-radius: 8px;
     background: rgba(11, 2, 35, 0.10);
     color: #3C354F;
@@ -49,7 +49,7 @@
 
 .nav-menu-list a {
     text-decoration: none;
-    padding: 0 32px;
+    padding: 0 20px;
     color: #3C354F;
 }
 
@@ -58,18 +58,17 @@
 }
 
 /* hero banner section style  */
-.hero-banner{
+.hero-banner {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-image: url('../images/group14.svg');
     background-repeat: no-repeat;
-    gap:65px;
+    gap: 65px;
     padding: 0 8%;
 }
-.hero-banner-content{
-   
-}
+
+.hero-banner-content {}
 
 .hero-banner-content h2 {
     font-size: 1.5rem;
@@ -111,6 +110,7 @@
     color: white;
     font-size: 1rem;
 }
+
 .hero-banner-content-btn-2 {
     border-radius: 48px;
     background: #4EC5F7;
@@ -120,6 +120,88 @@
     font-size: 1rem;
     margin-left: 24px;
 }
+
+/* online video section style  */
+.online-video {
+    padding: 0 8%;
+    margin: 120px 0;
+}
+
+.online-video-card {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.online-video-content {
+    text-align: center;
+}
+
+.video-card-item img {
+    width: 100%;
+}
+
+.online-video-content h2 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.online-video-content h2 span {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.online-video-content p {
+    margin-bottom: 48px;
+}
+
+.video-card-item-effect {
+    position: relative;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    border-radius:16px;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+}
+
+.card-overlay h4 {
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: #F948B2;
+    text-align: center;
+    
+}
+
+.card-overlay img{
+    width: 45px;
+    position: absolute;
+    top:40%;
+    left:40%;
+}
+
+.video-card-item-effect:hover {
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    border: 5px solid #FF42A5;
+    border-radius: 16px;
+}
+
+.video-card-item-effect:hover .card-overlay {
+    opacity: 1;
+}
+
 
 
 /* Responsive CSS for small device  */
@@ -131,14 +213,52 @@
         box-shadow: none;
         row-gap: 24px;
     }
-    .hero-banner{
+
+    .hero-banner {
         flex-direction: column-reverse;
         background-image: none;
     }
-    .hero-banner-content{
-    background-image: url('../images/Group14.png');
-    background-size: contain;
-    margin: 0  10%;
-    padding: 5%;
+
+    .hero-banner-content {
+        background-image: url('../images/Group14.png');
+        background-size: contain;
+        margin: 0 10%;
+        padding: 5%;
+    }
+    .online-video-card{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card-overlay img{
+        left:43%;
+    }
+}
+
+
+/* Responsive CSS for Medium device  */
+@media screen and (min-width:576px) and (max-width: 960px) {
+
+    .navbar,
+    .nav-menu-list {
+        flex-direction: column;
+        box-shadow: none;
+        row-gap: 24px;
+    }
+
+    .hero-banner {
+        flex-direction: column-reverse;
+        background-image: none;
+    }
+
+    .hero-banner-content {
+        background-image: url('../images/Group14.png');
+        background-size: contain;
+        margin: 0 10%;
+        padding: 7%;
+    }
+    .online-video-card{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-overlay img{
+        left:42%;
     }
 }
