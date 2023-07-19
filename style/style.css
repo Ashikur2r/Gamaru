@@ -1,7 +1,144 @@
 /* Font link  */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: 'Work Sans', sans-serif;
+    list-style: none;
+}
+
+/* navbar section style  */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 37px 0;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+}
+
+.nav-logo,
+.nav-menu-list,
+.follow-btn a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo h3 {
+    padding-left: 20px;
+    font-size: 2rem;
+}
+
+.nav-logo span {
+    color: #ff42a5;
+}
+
+.follow-btn {
+    padding: 17px 24px;
+    border-radius: 8px;
+    background: rgba(11, 2, 35, 0.10);
+    color: #3C354F;
+}
+
+.nav-menu-list {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+}
+
+.nav-menu-list a {
+    text-decoration: none;
+    padding: 0 32px;
+    color: #3C354F;
+}
+
+.follow-btn img {
+    padding-left: 20px;
+}
+
+/* hero banner section style  */
+.hero-banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('../images/group14.svg');
+    background-repeat: no-repeat;
+    gap:65px;
+    padding: 0 8%;
+}
+.hero-banner-content{
+   
+}
+
+.hero-banner-content h2 {
+    font-size: 1.5rem;
+    color: #0B0223;
+    font-weight: 600;
+}
+
+.hero-banner-content h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-banner-content-list li {
+    margin-bottom: 17px;
+}
+
+.content-list {
+    display: flex;
+    align-items: center;
+}
+
+.content-list p {
+    padding-left: 12px;
+}
+
+.hero-banner-picture img {
+    width: 100%;
+}
+
+.hero-banner-content-btn-1 {
+    border-radius: 48px;
+    background: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+    border-style: none;
+    padding: 20px 40px;
+    color: white;
+    font-size: 1rem;
+}
+.hero-banner-content-btn-2 {
+    border-radius: 48px;
+    background: #4EC5F7;
+    border-style: none;
+    padding: 20px 40px;
+    color: white;
+    font-size: 1rem;
+    margin-left: 24px;
+}
+
+
+/* Responsive CSS for small device  */
+@media screen and (max-width:576px) {
+
+    .navbar,
+    .nav-menu-list {
+        flex-direction: column;
+        box-shadow: none;
+        row-gap: 24px;
+    }
+    .hero-banner{
+        flex-direction: column-reverse;
+        background-image: none;
+    }
+    .hero-banner-content{
+    background-image: url('../images/Group14.png');
+    background-size: contain;
+    margin: 0  10%;
+    padding: 5%;
+    }
 }
