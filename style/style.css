@@ -161,6 +161,14 @@
 
 .video-card-item-effect {
     position: relative;
+    border-radius: 16px;
+    border: 5px solid white;
+    height: auto;
+    width: 100%;
+}
+.video-card-item-effect img{
+    height: auto;
+    width: 100%;
 }
 
 .card-overlay {
@@ -240,10 +248,13 @@
 .game-button-name {
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
     width: auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(5, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     column-gap: 10px;
-    padding: 50px 12%;
+    padding: 50px 10%;
     margin: 120px 0;
 }
 
@@ -257,11 +268,17 @@
     display: flex;
     align-items: center;
     margin: 15px 0;
-    padding: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border-style: none;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 2px solid white;
 }
 
 .game-btn p {
     font-size: 12px;
+    margin-left: 10px;
 }
 
 .game-btn:hover {
@@ -269,6 +286,7 @@
     background-color: white;
     border: 2px solid #FF42A5;
     color: #FF42A5;
+    transition: .1s ease-in-out;
 }
 
 /* footer section  */
@@ -327,6 +345,11 @@ li {
         padding: 5%;
     }
 
+    .hero-banner-content-btn-1,
+    .hero-banner-content-btn-2 {
+        padding: 20px 30px;
+    }
+
     .online-video-card {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -347,6 +370,7 @@ li {
     }
 
     .game-button-name {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -392,8 +416,9 @@ li {
         top: 70%;
         right: -7%;
     }
-
+    
     .game-button-name {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
 }
